@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace RPSLSProject
 {
-    class ComputerPlayer
+    class ComputerPlayer : Player
     {
+        public override void playersChoice()
+        {
+            
+        }
     }
 }
