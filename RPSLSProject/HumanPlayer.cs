@@ -6,20 +6,20 @@ using System.Threading.Tasks;
 
 namespace RPSLSProject
 {
-    class HumanPlayer : Player
+    class HumanPlayer : Player  //using inhertance from player class.
     {
-        public override void playersChoice()
+        public override void playersChoice() //overriding inherited method from player class
         {
             Console.WriteLine("Please pick a gesture."); 
             
-            for (int i = 0; i<5; i++)
+            for (int i = 0; i<5; i++) //using a for loop to console writeline the 5 gesture choices to the user.
             {
-                Console.WriteLine($"Press {i+1} for {GestureChoices[i]}");
+                Console.WriteLine($"Press {i+1} for {GestureChoices[i]}");  
             }
-            int userInput = int.Parse(Console.ReadLine());
+            int userInput = int.Parse(Console.ReadLine()); //capturing user input 
             choice = GestureChoices[userInput - 1];
 
-            bool isValid = false;
+            bool isValid = false;  //using a bool is valid to address bad user input.
             while (isValid)
             {
                 Console.WriteLine("Enter a number between 1-5 for the corresponding gestures");

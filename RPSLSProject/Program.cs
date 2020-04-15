@@ -10,8 +10,8 @@ namespace RPSLSProject
     {
         static void Main(string[] args)
         {
-            Game game = new Game();
-            
+            Game game = new Game(); //creating a new game object called game.
+            game.RunGame(); //game object is accesing the RunGame method in Game class.
         }
     }
 }

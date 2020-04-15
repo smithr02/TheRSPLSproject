@@ -8,13 +8,13 @@ namespace RPSLSProject
 {
     abstract class Player
     {
-        public string name;
+        public string name;   //variables for what a player HAS
         public int score;
         public string choice;
 
-        public List<string> GestureChoices = new List<string>();
+        public List<string> GestureChoices = new List<string>(); //created a list and stored it as GestureChoices
 
-        public Player()
+        public Player()   //constructor thats adding in the 5 gestures to be ussed.
         {
             GestureChoices.Add("Rock");
             GestureChoices.Add("Paper");
@@ -23,6 +23,6 @@ namespace RPSLSProject
             GestureChoices.Add("Spock");
         }
 
-        public abstract void playersChoice();
+        public abstract void playersChoice();  //parent method to be used by child classes, humanplayer and computerplayer.
     }
 }
