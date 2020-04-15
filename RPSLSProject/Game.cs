@@ -8,5 +8,6 @@ namespace RPSLSProject
 {
     class Game
     {
+      public int pointsNeededToWin = 3;
     }
 }

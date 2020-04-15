@@ -10,7 +10,9 @@ namespace RPSLSProject
     {
         public override void playersChoice()
         {
-            
+            Random rand = new Random();
+            int chosenGesture = rand.Next(0, 5);
+            choice = GestureChoices[chosenGesture];
         }
     }
 }
