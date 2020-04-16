@@ -21,7 +21,8 @@ namespace RPSLSProject
 
         public void RunGame()  //rungame method which will run all the methods in logical order to run the game properly.
         {
-
+            Instructions();
+            TypeOfPlayer();
         }
 
         public void Instructions()
@@ -50,7 +51,64 @@ namespace RPSLSProject
 
 
         }
-
+        public void ComparingGestures()
+        {
+            if (PlayerOne.choice == "Rock" && PlayerTwo.choice == "Scissors")
+            {
+                PlayerOneScore++;
+                Console.WriteLine("Player one wins this round");
+            }
+            else if (PlayerOne.choice == "Rock" && PlayerTwo.choice == "Lizard")
+            {
+                PlayerOneScore++;
+                Console.WriteLine("Player one wins this round");
+            }
+            else if (PlayerOne.choice == "Rock" && PlayerTwo.choice == "Paper")
+            {
+                PlayerTwoScore++;
+                Console.WriteLine("Player two wins this round");
+            }
+            else if (PlayerOne.choice == "Rock" && PlayerTwo.choice == "Spock")
+            {
+                PlayerTwoScore++;
+                Console.WriteLine("Player two wins this round");
+            }
+            else if (PlayerOne.choice == "Paper" && PlayerTwo.choice == "Scissors")
+            {
+                PlayerTwoScore++;
+                Console.WriteLine("Player two wins this round");
+            }
+            else if (PlayerOne.choice == "Paper" && PlayerTwo.choice == "Spock")
+            {
+                PlayerOneScore++;
+                Console.WriteLine("Player one wins this round");
+            }
+            else if (PlayerOne.choice == "Paper" && PlayerTwo.choice == "Lizard")
+            {
+                PlayerTwoScore++;
+                Console.WriteLine("Player two wins this round");
+            }
+            else if (PlayerOne.choice == "Scissors" && PlayerTwo.choice == "Lizard")
+            {
+                PlayerOneScore++;
+                Console.WriteLine("Player one wins this round");
+            }
+            else if (PlayerOne.choice == "Lizard" && PlayerTwo.choice == "Spock")
+            {
+                PlayerOneScore++;
+                Console.WriteLine("Player one wins this round");
+            }
+            else if (PlayerOne.choice == "Spock" && PlayerTwo.choice == "Scissors")
+            {
+                PlayerOneScore++;
+                Console.WriteLine("Player one wins this round");
+            }
+            else
+            {
+                Console.WriteLine("This is a tie!");
+                Console.ReadLine();
+            }
+        }
 
     }
 }
