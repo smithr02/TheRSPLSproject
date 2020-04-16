@@ -19,8 +19,8 @@ namespace RPSLSProject
             int userInput = int.Parse(Console.ReadLine()); //capturing user input 
             choice = GestureChoices[userInput - 1];
 
-            bool isValid = false;  //using a bool is valid to address bad user input.
-            while (isValid)
+            bool isNotValid = true;  //using a bool is valid to address bad user input.
+            while (isNotValid == true)
             {
                 Console.WriteLine("Enter a number between 1-5 for the corresponding gestures");
                 int number = int.Parse(Console.ReadLine());
@@ -30,7 +30,7 @@ namespace RPSLSProject
                 }
                 else
                 {
-                    isValid = false;
+                    isNotValid = false;
                 }
             }
 

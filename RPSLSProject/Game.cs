@@ -26,11 +26,28 @@ namespace RPSLSProject
 
         public void Instructions()
         {
-
+            Console.WriteLine("Welcome to RPSLS,the following comparisons are how to win: 1)Rock crushes Scissors 2) Scissors cuts Paper 3) Paper covers Rock 4) Rock crushes Lizard 5)Lizard poisons Spock 6)Spock smashes Scissors 7)Scissors decapitates Lizard 8) Lizard eats Paper 9) Paper disaproves Spock 10)Spock vaporizes Rock ");
+            Console.ReadLine();
         }
 
         public void TypeOfPlayer()
         {
+            int choice;
+            Console.WriteLine("Enter 1 for HumanPlayer vs ComputerPlayer or enter 2 for HumanPlayer vs HumanPlayer.");
+            choice = int.Parse(Console.ReadLine());
+            if (choice == 1)
+            {
+                PlayerOne = new HumanPlayer();
+                PlayerTwo = new ComputerPlayer();
+                Console.WriteLine("The game now is HumanPlayer vs ComputerPlayer. Good Luck!");
+            }
+            else if(choice == 2)
+            {
+                PlayerOne = new HumanPlayer();
+                PlayerTwo = new HumanPlayer();
+                Console.WriteLine("The game is now HumanPlayer vs HumanPlayer. May the best human win!");
+            }
+
 
         }
 
