@@ -23,6 +23,13 @@ namespace RPSLSProject
         {
             Instructions();
             TypeOfPlayer();
+
+            while (DeterminingWinner())
+            {
+                PlayerOne.playersChoice();
+                PlayerTwo.playersChoice();
+                ComparingGestures();
+            }
         }
 
         public void Instructions()
@@ -109,6 +116,31 @@ namespace RPSLSProject
                 Console.ReadLine();
             }
         }
+
+        public bool DeterminingWinner()
+        {
+            if (PlayerOneScore == WinningScore)
+            {
+                Console.WriteLine("Player one wins the game!!!");
+                Console.ReadLine();
+
+                return false;
+            }
+            else if (PlayerTwoScore == WinningScore)
+            {
+                Console.WriteLine("Player two wins the game!!!");
+                Console.ReadLine();
+
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+                
+
+        }
+
 
     }
 }
